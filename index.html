@@ -6,8 +6,69 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0" />
 		<title>Climate App</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<link
+			rel="stylesheet"
+			href="styles.css" />
 	</head>
 	<body>
-		<h1>Climate App</h1>
+		<header class="header">
+			<img
+				class="header_icon"
+				src="https://cdn-icons-png.flaticon.com/512/7334/7334120.png"
+				alt="Climate App logo" />
+			<form class="search-bar">
+				<input
+					type="text"
+					name="input_text"
+					class="search-bar_input" />
+				<button
+					type="submit"
+					class="search-bar_icon">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</form>
+		</header>
+		<main class="main">
+			<div class="info">
+				<img
+					class="info_image"
+					src="https://whatemoji.org/wp-content/uploads/2020/07/Sun-Emoji-1024x1024.png"
+					alt="Sunny day icon" />
+				<h2 class="info_temperature">25ºC</h2>
+				<p class="info_condition">Clear</p>
+			</div>
+			<div class="info-extra">
+				<h3 class="info-extra_location">Buenos Aires</h3>
+				<div class="info-conditions">
+					<div class="info-conditions_humidity">
+						<img
+							class="info-conditions_humidity-icon"
+							src="https://cdn-icons-png.flaticon.com/512/3262/3262966.png"
+							alt="Humidity icon" />
+						<div>
+							<p class="info-conditions_humidity-percentage">68%</p>
+							<p class="info-conditions_humidity-text">Humidity</p>
+						</div>
+					</div>
+					<div class="info-conditions_wind-speed">
+						<img
+							class="info-conditions_wind-speed-icon"
+							src="https://cdn-icons-png.flaticon.com/512/3741/3741046.png"
+							alt="Wind speed icon" />
+						<div>
+							<p class="info-conditions_wind-speed-speed">2 Km/h</p>
+							<p class="info-conditions_wind-speed-text">
+								Wind Speed
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="utility.js"></script>
+		<script src="script.js"></script>
 	</body>
 </html>
