@@ -3,7 +3,7 @@ const searchBar = document.querySelector('.search-bar');
 const searchInput = document.querySelector('.search-bar_input');
 
 async function getCity(inputText) {
-	const query = `http://api.openweathermap.org/geo/1.0/direct?q=${inputText}&limit=5&appid=${API_KEY}`;
+	const query = `https://api.openweathermap.org/geo/1.0/direct?q=${inputText}&limit=5&appid=${API_KEY}`;
 	const result = await fetch(query);
 	const data = await result.json();
 	return data[0];

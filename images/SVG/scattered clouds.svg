@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 95.19 65.53">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: url(#Degradado_sin_nombre_34);
+        opacity: .2;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        mix-blend-mode: overlay;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#radial-gradient-3);
+        opacity: .4;
+      }
+
+      .cls-5 {
+        fill: url(#radial-gradient);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="1624.5" cy="9" fx="1624.5" fy="9" r="81.35" gradientTransform="translate(1644.99) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".2" stop-color="#d9f7ff"/>
+      <stop offset="1" stop-color="#89c0f5"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="499.91" cy="-2231.72" fx="499.91" fy="-2231.72" r="9.55" gradientTransform="translate(3213.29 -3485.75) rotate(53.97) scale(1.43 -2.08) skewX(-4.38)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".1" stop-color="rgba(255, 255, 255, .85)" stop-opacity=".85"/>
+      <stop offset=".29" stop-color="rgba(255, 255, 255, .59)" stop-opacity=".59"/>
+      <stop offset=".47" stop-color="rgba(255, 255, 255, .38)" stop-opacity=".38"/>
+      <stop offset=".63" stop-color="rgba(255, 255, 255, .22)" stop-opacity=".22"/>
+      <stop offset=".78" stop-color="rgba(255, 255, 255, .1)" stop-opacity=".1"/>
+      <stop offset=".91" stop-color="rgba(255, 255, 255, .03)" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="528.09" cy="-2217.57" fx="528.09" fy="-2217.57" r="5.25" xlink:href="#radial-gradient-2"/>
+    <radialGradient id="Degradado_sin_nombre_34" data-name="Degradado sin nombre 34" cx="1781.86" cy="69.13" fx="1781.86" fy="69.13" r="5.49" gradientTransform="translate(1438.54 743.58) rotate(-146.99) scale(.84 -2.3) skewX(11.81)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".1" stop-color="rgba(255, 255, 255, .85)" stop-opacity=".85"/>
+      <stop offset=".29" stop-color="rgba(255, 255, 255, .59)" stop-opacity=".59"/>
+      <stop offset=".47" stop-color="rgba(255, 255, 255, .38)" stop-opacity=".38"/>
+      <stop offset=".63" stop-color="rgba(255, 255, 255, .22)" stop-opacity=".22"/>
+      <stop offset=".78" stop-color="rgba(255, 255, 255, .1)" stop-opacity=".1"/>
+      <stop offset=".91" stop-color="rgba(255, 255, 255, .03)" stop-opacity=".03"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g class="cls-1">
+    <g id="Capa_2" data-name="Capa 2">
+      <g id="OBJECTS">
+        <g>
+          <path class="cls-5" d="M32.77,0c15.43,0,28.37,10.67,31.84,25.04,2.8-1.36,5.94-2.14,9.26-2.14,11.77,0,21.32,9.54,21.32,21.31s-9.54,21.32-21.32,21.32h-41.11C14.67,65.53,0,50.86,0,32.77S14.67,0,32.77,0Z"/>
+          <path class="cls-3" d="M28.57,31.31c8.53-6.92,11.86-17.46,7.44-23.54-4.43-6.08-14.93-5.4-23.46,1.52C4.02,16.21.69,26.75,5.11,32.83c4.43,6.08,14.93,5.4,23.46-1.52Z"/>
+          <path class="cls-4" d="M71.5,40.3c4.69-3.8,6.52-9.6,4.09-12.94-2.43-3.34-8.2-2.97-12.9.83-4.69,3.8-6.52,9.6-4.09,12.94,2.43,3.34,8.21,2.97,12.9-.83Z"/>
+          <path class="cls-2" d="M81.91,48.59c5.16-5.22,10.48-7.26,11.9-4.56,1.41,2.7-1.62,9.11-6.78,14.33-5.16,5.22-10.49,7.26-11.9,4.56-1.41-2.7,1.62-9.11,6.78-14.33Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
