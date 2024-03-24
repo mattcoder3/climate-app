@@ -13,69 +13,80 @@
 			rel="stylesheet"
 			href="styles.css" />
 	</head>
-	<body>
-		<header class="header">
-			<img
-				class="header_icon"
-				src="https://cdn-icons-png.flaticon.com/512/7334/7334120.png"
-				alt="Climate App logo" />
-			<form class="search-bar">
-				<input
-					type="text"
-					name="input_text"
-					class="search-bar_input" />
-				<button
-					type="submit"
-					class="search-bar_icon">
-					<i class="fa-solid fa-magnifying-glass"></i>
-				</button>
-			</form>
-		</header>
-		<main class="main">
-			<div class="info">
+	<body class="body body-day">
+		<div class="main-app">
+			<header class="header">
 				<img
-					class="info_image"
-					src="https://whatemoji.org/wp-content/uploads/2020/07/Sun-Emoji-1024x1024.png"
-					alt="Sunny day icon" />
-				<h2 class="info_temperature">25ºC</h2>
-				<p class="info_condition">Clear</p>
-			</div>
-			<div class="info-extra">
-				<h3 class="info-extra_location">Buenos Aires</h3>
-				<div class="info-conditions">
-					<div class="info-conditions_humidity">
-						<img
-							class="info-conditions_humidity-icon"
-							src="https://cdn-icons-png.flaticon.com/512/3262/3262966.png"
-							alt="Humidity icon" />
-						<div>
-							<p class="info-conditions_humidity-percentage">68%</p>
-							<p class="info-conditions_humidity-text">Humidity</p>
+					class="header_icon"
+					src="./images/SVG/few-clouds-day.svg"
+					alt="Climate App logo" />
+				<form class="search-bar">
+					<input
+						list="inputSuggestions"
+						autocomplete="off"
+						type="text"
+						name="input_text"
+						placeholder="New York"
+						class="search-bar_input" />
+					<datalist
+						id="inputSuggestions"
+						class="search-bar_suggestions">
+					</datalist>
+				</form>
+			</header>
+			<main class="main">
+				<div class="info">
+					<img
+						class="info_image"
+						src="./images/SVG/clear-sky-day.svg"
+						alt="Sunny day icon" />
+					<h2 class="info_temperature"></h2>
+					<p class="info_condition"></p>
+				</div>
+				<div class="info-extra">
+					<h3 class="info-extra_location">
+						<span class="info-extra_city"></span>
+						<span class="info-extra_country"></span>
+					</h3>
+					<div class="info-conditions">
+						<div class="info-conditions_wrapper">
+							<img
+								class="info-conditions-icon"
+								src="./images/SVG/humidity.svg"
+								alt="Humidity icon" />
+							<div>
+								<p
+									class="info-conditions_stat info-conditions_humidity-percentage"></p>
+								<p class="info-conditions_text">Humidity</p>
+							</div>
 						</div>
-					</div>
-					<div class="info-conditions_wind-speed">
-						<img
-							class="info-conditions_wind-speed-icon"
-							src="https://cdn-icons-png.flaticon.com/512/3741/3741046.png"
-							alt="Wind speed icon" />
-						<div>
-							<p class="info-conditions_wind-speed-speed">2 Km/h</p>
-							<p class="info-conditions_wind-speed-text">
-								Wind Speed
-							</p>
+						<div class="info-conditions_wrapper">
+							<img
+								class="info-conditions-icon"
+								src="./images/SVG/wind.svg"
+								alt="Wind speed icon" />
+							<div>
+								<p
+									class="info-conditions_stat info-conditions_wind-speed-speed"></p>
+								<p class="info-conditions_text">Wind Speed</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<footer>
+			</main>
+		</div>
+		<footer class="footer">
+			<p>
 				<a
+					class="footer_ref"
 					href="https://www.freepik.com/free-vector/gradients-weather-icons-apps_15292633.htm#query=weather&position=2&from_view=author&uuid=c575764f-4084-4ff2-b626-6e7fc9d1ce99"
 					target="_blank"
 					>Images by coolvector</a
 				>
 				on Freepik
-			</footer>
-		</main>
+			</p>
+		</footer>
+		<script src="constants.js"></script>
 		<script src="utility.js"></script>
 		<script src="script.js"></script>
 	</body>

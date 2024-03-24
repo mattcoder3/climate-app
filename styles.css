@@ -1,22 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 * {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	color: #fff;
 }
 
 body {
 	height: 100vh;
 	overflow: hidden;
-	background-image: linear-gradient(
-		150deg,
-		rgb(177, 177, 228) 0%,
-		#455ff3 70%
-	);
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	padding: 4rem;
+	justify-content: space-between;
+	padding: 2rem;
+}
+
+.body-day {
+	background-image: linear-gradient(
+		150deg,
+		rgb(234, 234, 250) 0%,
+		rgb(180, 180, 219) 10%,
+		#4160b8 50%,
+		#1d3b8b 100%
+	);
+}
+
+.body-cloud {
+	background-image: linear-gradient(
+		150deg,
+		rgb(234, 234, 250) 0%,
+		rgb(180, 180, 219) 10%,
+		#61646e 50%,
+		#22252b 100%
+	);
+}
+
+.body-storm {
+	background-image: linear-gradient(
+		150deg,
+		rgb(184, 184, 194) 0%,
+		rgb(148, 148, 158) 10%,
+		#35363a 50%,
+		#030303 100%
+	);
+}
+
+.body-night {
+	background-image: linear-gradient(
+		150deg,
+		rgb(74, 74, 78) 0%,
+		rgb(62, 62, 66) 10%,
+		#18181a 50%,
+		#030303 100%
+	);
 }
 
 .header {
@@ -28,24 +66,112 @@ body {
 }
 
 .header_icon {
-	height: 5rem;
+	height: 4rem;
 	width: auto;
 }
 
 .search-bar {
 	width: 100%;
+	height: 8rem;
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
+.search-bar_input {
+	width: 20rem;
+	height: 3rem;
+	border: none;
+	padding: 1rem;
+	border-radius: 1.3rem;
+	color: black;
+}
+
+main {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.info-extra {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
 .info_image {
-	height: 15rem;
+	height: 8rem;
 	width: auto;
 }
 
+.info_condition {
+	margin-bottom: 1.5rem;
+}
+
+.info-conditions {
+	display: flex;
+	margin-top: 1.5rem;
+	width: 100%;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+@media (min-width: 950px) {
+	.info-conditions {
+		max-width: 60%;
+	}
+}
+
+.info-conditions_wrapper {
+	display: flex;
+	width: 50%;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.info-conditions_stat {
+	font-size: 1.35rem;
+}
+
+.info-conditions_text {
+	font-size: 0.8rem;
+	opacity: 0.7;
+}
+
+.info-extra_location {
+	text-align: center;
+}
+
+.info_temperature {
+	font-size: 6rem;
+	font-weight: 300;
+}
+
 .info-extra img {
-	height: 2rem;
+	height: 3rem;
 	width: auto;
+}
+
+.info-extra_country {
+	font-weight: bold;
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
 }
