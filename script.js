@@ -4,6 +4,7 @@ const searchInput = document.querySelector('.search-bar_input');
 
 // DOM
 const body = document.querySelector('.body');
+const gradient = document.querySelector('.gradient');
 const temp = document.querySelector('.info_temperature');
 const condition = document.querySelector('.info_condition');
 const city = document.querySelector('.info-extra_city');
@@ -58,6 +59,20 @@ searchInput.addEventListener('input', async (event) => {
 	);
 });
 
+function changeBackground(background) {
+	console.log(background);
+	const root = document.documentElement;
+	const isBefore = gradient.classList.contains('is-before');
+	const varName = `--${isBefore ? 'color' : 'before'}-gradient`;
+	for (let i = 0; i < 4; i++) {
+		root.style.setProperty(
+			`${varName}-${i + 1}`,
+			THEMES[background][i]
+		);
+	}
+	gradient.classList.toggle('is-before');
+}
+
 function updateHTML(climate) {
 	infoImage.setAttribute(
 		'src',
@@ -69,7 +84,7 @@ function updateHTML(climate) {
 	country.innerText = climate.country;
 	humidity.innerText = climate.humidity + '%';
 	wind.innerText = climate.wind + 'Km/h';
-	body.classList = `body body-${BACKGROUND[climate.icon]}`;
+	changeBackground(BACKGROUND[climate.icon]);
 }
 
 const getClimateFromCoords = async (lat, lon) => {
