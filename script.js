@@ -27,6 +27,12 @@ async function getCity(inputText) {
 	return data;
 }
 
+async function getClimateFromSuggestion(event) {
+	const cityData = await getCity(event.innerText);
+	searchSuggestions.innerHTML = '';
+	getClimateFromCoords(cityData[0].lat, cityData[0].lon);
+}
+
 async function getClimate(event) {
 	let input_text;
 	if (event?.code === 1) {
@@ -41,26 +47,63 @@ async function getClimate(event) {
 
 searchBar.addEventListener('submit', getClimate);
 
+document.addEventListener('keydown', (event) => {
+	if (searchSuggestions.innerHTML === '') return;
+	const numberOfChildren = searchSuggestions.children.length;
+	if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+		const numberSelector =
+			1 * (event.key === 'ArrowDown') - 1 * (event.key === 'ArrowUp');
+		if (document.activeElement.id === 'input') {
+			document
+				.getElementById(
+					`suggestion_${
+						numberSelector === 1 ? 0 : numberOfChildren - 1
+					}`
+				)
+				.focus();
+		} else if (
+			document.activeElement.classList.contains(
+				'search-bar_suggestion'
+			)
+		) {
+			const currentIndex = Number(
+				document.activeElement.id.slice(-1)
+			);
+			document
+				.getElementById(
+					`suggestion_${
+						(currentIndex + numberSelector + numberOfChildren) %
+						numberOfChildren
+					}`
+				)
+				.focus();
+		}
+	}
+	if (
+		event.key === 'Enter' &&
+		document.activeElement.classList.contains('search-bar_suggestion')
+	) {
+		document.activeElement.click();
+	}
+});
+
 searchInput.addEventListener('input', async (event) => {
-	console.log(event.target.value);
 	const inputText = event.target.value;
 	const searchResults = await getCity(inputText);
-	console.log(searchResults);
 	searchSuggestions.innerHTML = '';
-	searchResults.map(
-		(suggestion) =>
-			(searchSuggestions.innerHTML += `
-						<option
-							class="search-bar_suggestion"
-							value="${suggestion.name}">
+	searchResults.map((suggestion, index) => {
+		return (searchSuggestions.innerHTML += `
+						<li id="suggestion_${index}"
+							class="search-bar_suggestion" onclick="getClimateFromSuggestion(this)"
+							tabindex="0"
+							value="${suggestion.name}" style="top: ${`${index * 2.5}rem;`}">
 							${suggestion.name}
-						</option>
-	`)
-	);
+						</li>
+	`);
+	});
 });
 
 function changeBackground(background) {
-	console.log(background);
 	const root = document.documentElement;
 	const isBefore = gradient.classList.contains('is-before');
 	const varName = `--${isBefore ? 'color' : 'before'}-gradient`;

@@ -23,16 +23,16 @@
 					alt="Climate App logo" />
 				<form class="search-bar">
 					<input
-						list="inputSuggestions"
+						id="input"
 						autocomplete="off"
 						type="text"
 						name="input_text"
 						placeholder="New York"
+						tabindex="0"
 						class="search-bar_input" />
-					<datalist
+					<ul
 						id="inputSuggestions"
-						class="search-bar_suggestions">
-					</datalist>
+						class="search-bar_suggestions"></ul>
 				</form>
 			</header>
 			<main class="main">
@@ -80,6 +80,7 @@
 			<p>
 				<a
 					class="footer_ref"
+					tabindex="-1"
 					href="https://www.freepik.com/free-vector/gradients-weather-icons-apps_15292633.htm#query=weather&position=2&from_view=author&uuid=c575764f-4084-4ff2-b626-6e7fc9d1ce99"
 					target="_blank"
 					>Images by coolvector</a
