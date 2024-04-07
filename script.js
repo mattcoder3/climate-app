@@ -131,6 +131,7 @@ function updateHTML(climate) {
 }
 
 const getClimateFromCoords = async (lat, lon) => {
+	searchSuggestions.innerHTML = '';
 	const query = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 	const result = await fetch(query);
 	const data = await result.json();
